@@ -1,6 +1,3 @@
-# Remove objects
-rm(list=ls())
-
 # Create function to find a keyword in a column
 # This function will output a column of 0/1 if
 # The column row you reference contains the keyword
