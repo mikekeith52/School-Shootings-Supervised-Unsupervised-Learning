@@ -1,6 +1,3 @@
-# Remove objects
-rm(list=ls())
-
 # Install needed packages
 install.packages(c("rvest","stringi"))
 install.packages("plyr")
