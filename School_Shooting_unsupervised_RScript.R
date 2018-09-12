@@ -18,6 +18,7 @@ pdum<-function(kw,col,type=c(1,0)){ # can also be c(T,F)
   return(t3$dummy)
 }
 
+# Create function to summarize data by clusters
 clust.sum<-function(df,col,k){
   summ<-list()
   colnum<-which(names(df)==as.character(col))
@@ -151,7 +152,7 @@ D$age.known<-ifelse(D3$age>0,1,0)
 D$age.unk<-ifelse(D3$age==0,1,0)
 D$age.child<-D$age.child*D$age.known
 
-# Manually change ages
+# Manually change age groups of indv. obs. based on independent research
 D$age.adult[35]<-1
 D$age.teen[54]<-1
 D$age.adult[66]<-1
