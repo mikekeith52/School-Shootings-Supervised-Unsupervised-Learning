@@ -22,3 +22,9 @@ A cluster analysis seems to reinforce the implications of the negative binomial 
 Findings given in the following blog post:
 
 http://econmikekeith.blogspot.com/2018/08/unsupervised-learning-to-classify-and.html
+
+# Tableau
+
+Interactive map underscoring the issue (from data taken on wikipedia--code to scrape given in Rscript):
+
+https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map
