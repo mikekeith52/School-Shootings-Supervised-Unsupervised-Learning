@@ -1,5 +1,4 @@
 # School-Shootings-Usupervised-Learning
-R with WAPO data to classify school shootings via K-means
+Utilizing the coding language R, WAPO data was used to model school shooting casualties with a negative binomial model. K-means clustering then used to classify school shootings into three distinct groups.
+
 Data maintained by Washington Post GitHub page: https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv
-Insights from unsupervised learning include the fact that resource officers seems to only help reduce casualties in impoverished schools, more poverty is correlated with fewer casualties
-Full blog posts: econmikekeith.blogspot.com
