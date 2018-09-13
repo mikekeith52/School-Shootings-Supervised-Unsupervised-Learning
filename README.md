@@ -3,6 +3,8 @@ Utilizing the coding language R, WAPO data was used to model school shooting cas
 
 Data maintained by Washington Post GitHub page: https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv
 
+jpeg files attached show general conclusions visually
+
 # Negative binomial model
 The distribution in casualties seemed to follow a poisson generally with overdispersion, and negative binomial returned favaroable information criteria
 
