@@ -29,3 +29,10 @@ http://econmikekeith.blogspot.com/2018/08/unsupervised-learning-to-classify-and.
 Interactive map underscoring the issue (from data taken from wikipedia--code to scrape the data given in Rscript):
 
 https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map
+
+# Publication
+
+The results of all the above are published in Spire Magazine:
+
+https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/
+
