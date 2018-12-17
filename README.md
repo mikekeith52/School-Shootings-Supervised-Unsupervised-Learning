@@ -6,7 +6,7 @@ Data maintained by Washington Post GitHub page: https://raw.githubusercontent.co
 jpeg files attached show general conclusions visually.
 
 # Negative binomial model
-The distribution in casualties seemed to follow a Poisson distribution generally with overdispersion, and the negative binomial estimation returned favaroable information criteria.
+The distribution in casualties seemed to follow a Poisson distribution generally with overdispersion, and the negative binomial estimation returned favaroable information criteria. The code for writing an visualizing this model are given in the Rscript.
 
 Insights gleaned from the negative binomial model recorded in the following blog post:
 
