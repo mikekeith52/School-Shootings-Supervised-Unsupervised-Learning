@@ -393,7 +393,7 @@ D$age.known<-ifelse(D3$age>0,1,0)
 D$age.unk<-ifelse(D3$age==0,1,0)
 D$age.child<-D$age.child*D$age.known
 
-# Manually change ages
+# Manually change ages - based on independent research
 D$age.adult[35]<-1
 D$age.teen[54]<-1
 D$age.adult[66]<-1
