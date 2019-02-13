@@ -86,9 +86,9 @@ Interactive map underscoring the issue (from data taken from wikipedia--code to 
 
 # Publication
 
-The results of all the above are published in Spire Magazine:
+The results of all the above are published in Spire Magazine in a format understandable to non-technical readers:
 
 https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/
 
 # R Code
-R code is attached and will not be expounded here.
+R code is attached to the repository and will not be expounded here.
