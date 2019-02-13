@@ -93,4 +93,7 @@ The results of all the above are published in Spire Magazine in a format underst
 https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/
 
 # R Code
-R code is attached to the repository and will not be expounded here.
+R code is attached to the repository and will not be expounded here, other than to highlight where each component is located:
+
+- Code for supervised learning in the attached School_Shooting_Poisson_RScript.R
+- Code for unsupervised learning in the attached School_Shooting_unsupervised_RScript.R
