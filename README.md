@@ -66,7 +66,7 @@ Using these interpretations, we can think of the first principal component as th
 |lunch5075|-0.028|0.265|
 |lunch75.plus|-0.137|0.106|
 
-*The lunch variables are binary - first one, lunch2550, is 1 if the school has between 25-50% of the student body eligible for a reduced-price lunch program, and so forth - these were the proxies used to represent poverty levels in the analysis*
+*The lunch variables are binary - first one, lunch2550, is 1 if the school has between 25-50% of the student body eligible for a reduced-price lunch program, and zero otherwise, and so forth through the three lunch-related variables - these were the proxies used to represent poverty levels in the analysis*
 
 Other breakdowns of the data seem to confirm these findings:
 
