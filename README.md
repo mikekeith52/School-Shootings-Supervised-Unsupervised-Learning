@@ -12,11 +12,18 @@ Insights gleaned from the negative binomial model recorded in the following blog
 
 http://econmikekeith.blogspot.com/2018/08/taking-statistical-approach-to-analyze.html
 
-Summarizing:
-The model suggests that resource officers lead to higher casualties, except in high-poverty schools, all esle constant.
-More impoverished schools see fewer casualties generally.
-Rifles are weapons which cause the highest amounts of casualties.
-The legaility/illegality of a weapon is inconclusive as to how it affects casualties.
+Summarizing the results of the study, and visualizing with `ggplot2`, the following conclusions are made:
+- Resource officers on campus lead to higher casualties, except in high-poverty schools, all esle constant.
+
+
+- More impoverished schools see fewer casualties generally.
+- Rifles are weapons which cause the highest amounts of casualties.
+- The legaility/illegality of a weapon is inconclusive as to how it affects casualties.
+![Casualties decrease as poverty increases, and the fitted line representing schools with resource officers present is higher on the casualties axis](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/rifle_model_fitted_line.jpeg)
+
+![Illegality of the weapon in causing casualties is inconclusive](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/illegal_weapon_fitted_line.jpeg)
+
+Answering questions involving the above points was not my aim in doing this analysis, but these were the things I found most interesting at the conclusion.
 
 # Cluster analysis
 A cluster analysis seems to reinforce the implications of the negative binomial model.
