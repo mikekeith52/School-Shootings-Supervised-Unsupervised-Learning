@@ -82,7 +82,9 @@ Other breakdowns of the data seem to confirm these findings:
 
 Interactive map underscoring the issue (from data taken from wikipedia--code to scrape the data given in Rscript):
 
-![](https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map)
+https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map
+
+![](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/Tableau%20map%20-%20SS.PNG)
 
 # Publication
 
