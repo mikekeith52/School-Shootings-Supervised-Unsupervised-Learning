@@ -19,7 +19,7 @@ Summarizing the results of the study, and visualizing with `ggplot2`, the follow
 
 
 - More impoverished schools see fewer casualties generally.
-- Rifles are weapons which cause the highest amounts of casualties.
+- Rifles are the weapons which cause the highest amounts of casualties.
 - The legaility/illegality of a weapon is inconclusive as to how it affects casualties.
 
 **Casualties decrease as poverty increases, and the fitted line representing schools with resource officers present is higher on the casualties axis**
