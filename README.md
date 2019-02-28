@@ -82,7 +82,7 @@ Other breakdowns of the data seem to confirm these findings:
 
 # Tableau
 
-Interactive map underscoring the issue (from data taken from wikipedia--code to scrape the data given in Rscript):
+The link below is to an interactive map that highlights every school shooting listed on wikipedia in an interactive manner, breaking down by number of casualties and the era in which the shooting occored. The data is prepped for this analysis in the School_Shooting_Poisson_RScript.R file, where an api is used to call and manipulate the data directly from Wikipedia.
 
 https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map
 
