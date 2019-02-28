@@ -59,7 +59,7 @@ The interpretation can be thought of in the following manner:
 - **Cluster 3:** Low-casualty, low-povery
 -- These are the points in the bottom-left
 
-Using these interpretations, we can think of the first principal component as the high-casualty, low-poverty component, and the second principal componenet as the high-poverty, low-casualty component. Indeed, looking at the rotation, that is what is suggested:
+Using these interpretations, we can think of the first principal component as the high-casualty, low-poverty component, and the second principal component as the high-poverty, low-casualty component. Indeed, looking at the rotation, that is what is suggested:
 
 |Variable|PC1 Rotation|PC2 Rotation|
 |------|------|-----|
@@ -68,7 +68,7 @@ Using these interpretations, we can think of the first principal component as th
 |lunch5075|-0.028|0.265|
 |lunch75.plus|-0.137|0.106|
 
-*The lunch variables are binary - first one, lunch2550, is 1 if the school has between 25-50% of the student body eligible for a reduced-price lunch program, and zero otherwise, and so forth through the three lunch-related variables - these were the proxies used to represent poverty levels in the analysis*
+*The lunch variables are binary - first one, lunch2550, is one if the school has between 25-50% of the student body eligible for a reduced-price lunch program, and zero otherwise, and so forth through the three lunch-related variables - these were the proxies used to represent poverty levels in the analysis*
 
 Other breakdowns of the data seem to confirm these findings:
 
