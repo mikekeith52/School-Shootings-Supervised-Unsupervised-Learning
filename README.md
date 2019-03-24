@@ -6,7 +6,7 @@ Data maintained by Washington Post GitHub page: https://raw.githubusercontent.co
 jpeg files attached show general conclusions visually.
 
 # Negative binomial model
-The distribution in casualties seemed to follow a Poisson distribution generally with overdispersion, and the negative binomial estimation returned more favaroable information criteria than a Poisson regression or normal linear regression. The code for writing and visualizing this model is given in the Rscript.
+The distribution of casualties seemed to follow a Poisson distribution generally with overdispersion, and the negative binomial estimation returned more favaroable information criteria than a Poisson regression or normal linear regression. The code for writing and visualizing this model is given in the Rscript.
 
 A negative binomial model is normally used when the data to be predicted follows a Poisson distribution but there is a large amount overdispersion--the variance is much greater than the mean. That was the case for the phenomenon of interest in this case, casualties per school shooting, where the mean is 1.9 and variance is 19.2.
 
