@@ -76,7 +76,7 @@ Other breakdowns of the data seem to confirm these findings:
 
 ![](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/cluster_casualties.jpeg)
 
-**High poverty clusters to the middle / left of the graph
+**High poverty clusters to the middle / left of the graph**
 
 ![](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/cluster_poverty.jpeg)
 
