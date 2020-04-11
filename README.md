@@ -5,6 +5,8 @@ Data maintained by Washington Post GitHub page: https://raw.githubusercontent.co
 
 jpeg files attached show general conclusions visually.
 
+The findings have been published in a Florida State student magazine, Spire: [https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/](https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/)
+
 # Negative binomial model
 The distribution of casualties seemed to follow a Poisson distribution generally with overdispersion, and the negative binomial estimation returned more favaroable information criteria--AIC and BIC--than a Poisson regression or normal linear regression. The code for writing and visualizing this model is given in the Rscript.
 
@@ -87,12 +89,6 @@ The link below is to an interactive map that highlights every school shooting li
 https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map
 
 ![](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/Tableau%20map%20-%20SS.PNG)
-
-# Publication
-
-The results of all the above are published in Spire Magazine in a format understandable to non-technical readers:
-
-https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/
 
 # R Code
 R code is attached to the repository and will not be expounded here, other than to highlight where each component is located:
