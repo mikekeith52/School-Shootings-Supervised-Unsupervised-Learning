@@ -18,8 +18,6 @@ http://econmikekeith.blogspot.com/2018/08/taking-statistical-approach-to-analyze
 
 Summarizing the results of the study, and visualizing with `ggplot2`, the following conclusions are made:
 - Resource officers on campus lead to higher casualties, except in high-poverty schools, all esle constant.
-
-
 - More impoverished schools see fewer casualties generally.
 - Rifles are the weapons which cause the highest amounts of casualties.
 - The legaility/illegality of a weapon is inconclusive as to how it affects casualties.
