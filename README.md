@@ -1,20 +1,16 @@
 # School Shootings Introduction - data, purpose
-Utilizing the coding language R, Data maintained by the Washington Post was employed to model school shooting casualties with a negative binomial model. K-means clustering was then used to classify school shootings into three distinct groups.
+Utilizing R, [data](https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv) maintained by the Washington Post was employed to model school shooting casualties with a negative binomial model (which models a Poisson distribution with overdipersion). K-means clustering was then used to classify school shootings into three distinct groups.
 
-Data maintained by Washington Post GitHub page: https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv
-
-jpeg files attached show general conclusions visually.
-
+## Publication
 The findings have been published in a Florida State student magazine, Spire: [https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/](https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/)
 
-# Negative binomial model
-The distribution of casualties seemed to follow a Poisson distribution generally with overdispersion, and the negative binomial estimation returned more favaroable information criteria--AIC and BIC--than a Poisson regression or normal linear regression. The code for writing and visualizing this model is given in the Rscript.
+## Caveats
+The dataset utilized does not contain enough observations to offer any reliable predictive power. This project attempted to be fully descriptive in nature. Although some of the findings can be disputed, through solid statistical techniques, there were interesting insights gleaned, especially about resource officers' roles in reducing and/or increasing casualties in a given school shooting and which types of weapons cause the most casualties.  
+
+## Process
+The distribution of casualties follows a Poisson distribution generally with overdispersion, and the negative binomial estimation returned more favaroable information criteria--AIC and BIC--than a Poisson regression or normal linear regression. The code for writing and visualizing this model is given in the Rscript.
 
 A negative binomial model is used when the data to be predicted follows a Poisson distribution but there is a large amount of overdispersion--the variance is much greater than the mean. That was the case for the phenomenon of interest in this case, casualties per school shooting, where the mean is 1.9 and variance is 19.2.
-
-Insights gleaned from the negative binomial model are recorded in the following blog post:
-
-http://econmikekeith.blogspot.com/2018/08/taking-statistical-approach-to-analyze.html
 
 Summarizing the results of the study, and visualizing with `ggplot2`, the following conclusions are made:
 - Resource officers on campus lead to higher casualties, except in high-poverty schools, all esle constant.
