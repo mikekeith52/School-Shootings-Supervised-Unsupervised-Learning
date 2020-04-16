@@ -103,7 +103,7 @@ Number of Fisher Scoring iterations: 1
  
  Distribution of the dependent variable follows a Poisson shape with overdispersion:
  
- ![]()
+ ![](https://github.com/mikekeith52/School-Shootings-Supervised_Usupervised-Learning/blob/master/casualties_distribution.png)
 
 The statistically significant inpupts at the 90% confidence level, which are the ones with a p-value less than 0.10, from the best model were then examined and interpreted. These included:
 - resouce_officer (positive effect on casualties -- this can have several reasons, and I'm not sure there is one definitive answer for why this)
@@ -115,7 +115,7 @@ The statistically significant inpupts at the 90% confidence level, which are the
 
 This is not an all-inclusive list of the statistically significant variables, but these were the most interesting to interpret.  
 
-After the Negative Binomial model was interpreted, a K-Means Cluster analysis was performed to further understand how the datapoints relate to one another. Using this method, school shootings were divided into three types and the findings from this model were generally confirmed.  
+After the Negative Binomial model was interpreted, a K-Means Cluster analysis was performed to further understand how the datapoints relate to one another. Using this method, school shootings were divided into three types and the findings from the statistical model were generally confirmed.  
 
 ## Key Findings
 - Resource officers on campus lead to higher casualties, except in high-poverty schools, all esle constant.
