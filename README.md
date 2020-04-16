@@ -1,5 +1,5 @@
 # School Shootings Introduction - data, purpose
-Utilizing R, [data](https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv) maintained by the Washington Post was employed to model school shooting casualties with a negative binomial model (which models a Poisson distribution with overdipersion). K-means clustering was then used to classify school shootings into three distinct groups.
+Utilizing R, [data](https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv) maintained by the [Washington Post](https://github.com/mikekeith52/data-school-shootings) was employed to model school shooting casualties with a negative binomial model (which models a Poisson distribution with overdipersion). K-means clustering was then used to classify school shootings into three distinct groups.
 
 ## Publication
 The findings have been [published](https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/) in a Florida State student magazine, Spire.  
