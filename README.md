@@ -10,9 +10,13 @@ The dataset utilized does not contain enough observations to offer any reliable 
 ## Process
 The distribution of casualties follows a Poisson distribution generally with overdispersion, and the negative binomial estimation returned more favaroable information criteria--AIC and BIC--than a Poisson regression or normal linear regression. The code for writing and visualizing this model is given in the Rscript.
 
-A negative binomial model is used when the data to be predicted follows a Poisson distribution but there is a large amount of overdispersion--the variance is much greater than the mean. That was the case for the phenomenon of interest in this case, casualties per school shooting, where the mean is 1.9 and variance is 19.2.
+A negative binomial model is used when the data to be predicted follows a Poisson distribution but there is a large amount of overdispersion--the variance is much greater than the mean. That was the case for the phenomenon of interest in this case, casualties per school shooting, where the mean is 1.9 and variance is 19.2.  
 
-Summarizing the results of the study, and visualizing with `ggplot2`, the following conclusions are made:
+The statistically significant inpupts from these models were then examined and interpreted. The visual meaning of these interpretations were placed into GGPLOT visualizations, which revealed the amount of dispersion in the data (to be expected), *with a clear trend buried within it nonetheless.*  
+
+After the Negative Binomial model was fully interpreted, a K-Means Cluster analysis was performed to further understand how the datapoints relate to one another. Using this method, school shootings were divided into three types.  
+
+## Key Findings
 - Resource officers on campus lead to higher casualties, except in high-poverty schools, all esle constant.
 - More impoverished schools see fewer casualties generally.
 - Rifles are the weapons which cause the highest amounts of casualties.
@@ -32,14 +36,8 @@ Summarizing the results of the study, and visualizing with `ggplot2`, the follow
 
 Answering questions involving the above points was not my aim in doing this analysis, but these were the things I found most interesting at the conclusion.
 
-# Cluster analysis
-A cluster analysis seems to reinforce the implications of the negative binomial model.
-Findings given in the following blog post:
-
-http://econmikekeith.blogspot.com/2018/08/unsupervised-learning-to-classify-and.html
-
-## Cluster analysis approach
-After trying several different cluster analysis options, I decided to reduce the dimensionality of the dataset using two principal components, capturing 20.6% of the variance in the dataset. Then, a k-means cluster analysis with three centers seemed to return an intuitive breakdown of the data.
+## Cluster analysis
+A cluster analysis reinforces the implications of the negative binomial model. After trying several different cluster analysis options, I decided to reduce the dimensionality of the dataset using two principal components, capturing 20.6% of the variance in the dataset. Then, a k-means cluster analysis with three centers seemed to return an intuitive breakdown of the data.  
 
 *With three centers, the clusters can be viewed in the following visualization:*
 
@@ -75,17 +73,3 @@ Other breakdowns of the data seem to confirm these findings:
 **High poverty clusters to the middle / left of the graph**
 
 ![](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/cluster_poverty.jpeg)
-
-# Tableau
-
-The link below is to an interactive map that highlights every school shooting listed on wikipedia in an interactive manner, breaking down by number of casualties and the era in which the shooting occored. The data is prepped for this analysis in the School_Shooting_Poisson_RScript.R file, where an api is used to call and manipulate the data directly from Wikipedia.
-
-https://public.tableau.com/profile/michael.keith6845#!/vizhome/SchoolShootingsMap/Map
-
-![](https://github.com/mikekeith52/School-Shootings-Usupervised-Learning/blob/master/Tableau%20map%20-%20SS.PNG)
-
-# R Code
-R code is attached to the repository and will not be expounded here, other than to highlight where each component is located:
-
-- Code for supervised learning in the attached School_Shooting_Poisson_RScript.R
-- Code for unsupervised learning in the attached School_Shooting_unsupervised_RScript.R
