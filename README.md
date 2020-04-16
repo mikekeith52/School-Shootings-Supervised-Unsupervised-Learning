@@ -106,7 +106,7 @@ Number of Fisher Scoring iterations: 1
  ![]()
 
 The statistically significant inpupts at the 90% confidence level, which are the ones with a p-value less than 0.10, from the best model were then examined and interpreted. These included:
-- resouce_officer (positive effect on casualties)
+- resouce_officer (positive effect on casualties -- this can have several reasons, and I'm not sure there is one definitive answer for why this)
 - wt.handgun (positive effect on casualties compared to an unknown weapon type)
 - wt.shotgun (positive effect on casualties compared to an unknown weapon type)
 - wt.rifle (highest positive effect on casualties compared to an unknown weapon type)
