@@ -5,7 +5,7 @@ Utilizing R, [data](https://raw.githubusercontent.com/washingtonpost/data-school
 The findings have been [published](https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/) in a Florida State student magazine, Spire.  
 
 ## Caveats
-The dataset utilized does not contain enough observations to offer any reliable predictive power. This project attempted to be fully descriptive in nature. Although some of the findings can be disputed, through solid statistical techniques, there were interesting insights gleaned, especially about resource officers' roles in reducing and/or increasing casualties in a given school shooting and which types of weapons cause the most casualties.  
+The dataset utilized does not contain enough observations to offer any reliable predictive power. This project attempted to be fully descriptive in nature. Although some of the findings can be disputed, through solid statistical techniques, there were interesting insights gleaned, especially about resource officers' presence and how that is suggestive of increasing casualties in a given school shooting, how poverty affects casualties, and which types of weapons are most prolific in these situations.  
 
 ## Research Question
 Can the number of casualties per school shooting be described statistically with the factors in this dataset?
