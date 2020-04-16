@@ -106,12 +106,12 @@ Number of Fisher Scoring iterations: 1
  ![](https://github.com/mikekeith52/School-Shootings-Supervised_Usupervised-Learning/blob/master/casualties_distribution.png)
 
 The statistically significant inpupts at the 90% confidence level, which are the ones with a p-value less than 0.10, from the best model were then examined and interpreted. These included:
-- resouce_officer (positive effect on casualties -- this can have several reasons, and I'm not sure there is one definitive answer for why this)
+- resouce_officer (positive effect on casualties -- this can have several reasons, and I'm not sure there is one definitive answer)
 - wt.handgun (positive effect on casualties compared to an unknown weapon type)
 - wt.shotgun (positive effect on casualties compared to an unknown weapon type)
 - wt.rifle (highest positive effect on casualties compared to an unknown weapon type)
-- reas.indiscriminate (positive effect on casualties compared to an unknown weapon type)
-- school lunch variables (as the proportion of students eligible for this went up, casualties actually went down--probably due to the decreased notoriety one would get from targeting a low-income area vs. an affluent one)
+- reas.indiscriminate (positive effect on casualties to an unknown reason)
+- school lunch variables (as the proportion of students eligible for these reduced-priced lunch programs go up, casualties actually go down--probably due to the decreased notoriety one would get from targeting a low-income area vs. an affluent one)
 
 This is not an all-inclusive list of the statistically significant variables, but these were the most interesting to interpret.  
 
