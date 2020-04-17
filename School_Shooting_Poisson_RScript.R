@@ -5,6 +5,9 @@ install.packages("MASS")
 install.packages("lubridate")
 install.packages("corrplot")
 
+# CHANGE TO YOUR WORKING DIRECTORY
+setwd("C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting")
+
 
 # Create function to find a keyword in a column
 # This function will output a column of 0/1 if
@@ -34,197 +37,8 @@ ic<-function(name="model",model){
 # Read in files
 # Scrape data from WAPO website - don't have to change this path
 D<-read.csv("https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv")
-write.csv(D,"C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\wapodf.csv")
+write.csv(D,"wapo_ss_raw_data.csv")
 
-# Read states dataset from computer - do have to change this
-states<-read.csv("C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\States\\all_states_g.csv")
-
-# Read in gun law index
-gli1<-read.csv("C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\Gun Index\\2009_gunlaw_data.csv")
-gli2<-read.csv("C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\Gun Index\\2011_gunlaw_data.csv")
-gli3<-read.csv("C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\Gun Index\\2014_gunlaw_data.csv")
-
-library("rvest")
-library("stringi")
-url <- "https://en.wikipedia.org/wiki/List_of_school_shootings_in_the_United_States"
-
-# Scrape data from wikipedia - there are 20 tables
-
-
-df1 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[1]') %>%
-    html_table()
-df1<-data.frame(df1)
-
-df2 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[2]') %>%
-    html_table()
-df2<-data.frame(df2)
-
-df3 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[3]') %>%
-    html_table()
-df3<-data.frame(df3)
-
-df4 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[4]') %>%
-    html_table()
-df4<-data.frame(df4)
-
-df5 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[5]') %>%
-    html_table()
-df5<-data.frame(df5)
-
-df6 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[6]') %>%
-    html_table()
-df6<-data.frame(df6)
-
-df7 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[7]') %>%
-    html_table()
-df7<-data.frame(df7)
-
-df8 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[8]') %>%
-    html_table()
-df8<-data.frame(df8)
-
-df9 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[9]') %>%
-    html_table()
-df9<-data.frame(df9)
-
-df10 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[10]') %>%
-    html_table()
-df10<-data.frame(df10)
-
-df11 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[11]') %>%
-    html_table()
-df11<-data.frame(df11)
-
-df12 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[12]') %>%
-    html_table()
-df12<-data.frame(df12)
-
-df13 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[13]') %>%
-    html_table()
-df13<-data.frame(df13)
-
-df14 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[14]') %>%
-    html_table()
-df14<-data.frame(df14)
-
-df15 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[15]') %>%
-    html_table()
-df15<-data.frame(df15)
-
-df16 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[16]') %>%
-    html_table()
-df16<-data.frame(df16)
-
-df17 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[17]') %>%
-    html_table()
-df17<-data.frame(df17)
-
-df18 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[18]') %>%
-    html_table()
-df18<-data.frame(df18)
-
-df19 <- url %>%
-    read_html() %>%
-    html_nodes(xpath='//*[@id="mw-content-text"]/div/table[19]') %>%
-    html_table()
-df19<-data.frame(df19)
-
-# Combine the data into one
-dff<-rbind(df1,df2,df3,df4,df5,df6,
-  df7,df8,df9,df10,df11,df12,
-  df13,df14,df15,df16,df17,df18,
-  df19)
-
-# Create a year variable (cleverly)
-dff$Year<-substr(dff$Date, nchar(as.character(dff$Date))-3,
-  nchar(as.character(dff$Date)))
-
-# Create a month variable (cleverly)
-dff$Month<-substr(dff$Date, nchar(as.character(dff$Date))-17,
-  nchar(as.character(dff$Date))-8)
-dff$Month<-gsub(" ",replacement="",x=dff$Month)
-dff$Month<-gsub("[0-9]+",replacement="",x=dff$Month)
-dff$Month<-gsub("-",replacement="",x=dff$Month)
-
-# Create a day variable (cleverly)
-dff$Day<-substr(dff$Date, nchar(as.character(dff$Date))-7,
-  nchar(as.character(dff$Date))-6)
-dff$Day<-gsub(" ",replacement="",x=dff$Day)
-
-# Create a date variable
-dff$Mon<-substr(dff$Month,1,3)
-dff$Date<-paste0(dff$Day,dff$Mon,dff$Year)
-dff$Date <- as.Date(dff$Date, "%d%b%Y")
-
-# View progress
-head(dff)
-
-# Create month-year variable
-dff$MoYR<-paste(dff$Mon,dff$Year)
-dff<-dff[order(dff$Date),]
-
-# Make year numeric for arithmetic
-dff$Year<-as.numeric(dff$Year)
-
-# Create an era variable
-dff$era<-ifelse(dff$Year>=2010,"2010s",
-  ifelse(dff$Year>=2000,"2000s",
-  ifelse(dff$Year>=1990,"1990s",
-  ifelse(dff$Year>=1980,"1980s",
-  ifelse(dff$Year>=1970,"1970s",
-  ifelse(dff$Year>=1960,"1960s",
-  ifelse(dff$Year>=1900,"1900-1959",
-  ifelse(dff$Year>=1800,"1800s",
-  ifelse(dff$Year>=1700,"1700s"
-)))))))))
-
-
-t2<-data.frame(do.call('rbind',strsplit(as.character(dff$Location),',',fixed=T)))
-dff$City<-t2$X1
-dff$State<-t2$X2
-
-head(dff) ; tail(dff)
-
-write.csv(dff,'C:\\Users\\uger7\\Desktop\\shooting.csv')
-
-#############################
-# Wash Post Data - D
 # Clone data in case we want to reference it later
 D2<-D
 
@@ -300,33 +114,6 @@ D$white.proportion<-1-D$minority.proportion
 D$date_date<-as.Date(as.character(D$date),format="%m/%d/%Y")
 D$year.n<-as.numeric(D$year)
 D$month.n<-as.numeric(substr(D$date_date,6,7))
-#library("lubridate")
-#D$monyear<-as.yearmon(paste(D$year.n,D$month.n),format="%Y %m")
-
-### Process -- add states data to main dataframe
-### Spoilers -- this whole process is useless
-### Because the variable being created doesn't explain
-### Anything, but we will do it anyway
-D$ref<-paste0(D$year.n,"-",D$month.n,"-",D$state)
-D$ref<-gsub(" ","",D$ref)
-state_long<-reshape(states, direction = "long", varying = c(names(states)[5:55]), v.names = "Value", 
-        idvar = c("Date","Year","MoYR"))
-state.r<-data.frame(state.name)
-state.r$state.name<-as.character(state.r$state.name)
-state.r$ref<-seq(1,50,1)
-state.r$region<-state.region
-state.r[51,]<-c("District of Columbia",51,"Northeast")
-state_long$state<-state.r$state.name[match(state_long$time,state.r$ref)]
-state_long$Value_norm<-scale(state_long$Value)
-state_long$ref<-paste0(state_long$MoYR,"-",state_long$state)
-state_long$ref<-gsub(" ","",state_long$ref)
-D$ci<-state_long$Value[match(D$ref,state_long$ref)]
-D$ci<-ifelse(is.na(D$ci)==T,state_long$Value[nrow(state_long)],D$ci)
-D$ci_norm<-state_long$Value_norm[match(D$ref,state_long$ref)]
-D$ci_norm<-ifelse(is.na(D$ci_norm)==T,
-  state_long$Value_norm[nrow(state_long)],D$ci)
-
-### Process done
 
 # Create time of day variable
 D$time<-as.character(D$time)
@@ -334,7 +121,6 @@ D$time.unknown<-ifelse(D$time=="",1,0)
 D$time.known<-ifelse(D$time!="",1,0)
 D$morning<-pdum("AM",D$time)*D$time.known
 D$afternoon<-pdum("PM",D$time)*D$time.known
-
 
 # Create shooter type (st) dummy variables
 D$shooter_relationship1<-as.character(D$shooter_relationship1)
@@ -375,13 +161,6 @@ D$gender.known<-ifelse(D$gender_shooter1=="",1,0)
 D$gender.known<-ifelse(D$gender_shooter1!="",1,0)
 D$gender.female<-pdum("f",D$gender_shooter1)
 D$gender.male<-pdum("m",D$gender_shooter1)
-
-# manually change genders
-
-
-# Create region variable
-D$region<-state.r$region[match(gsub(" ","",D$state),
-  gsub(" ","",state.r$state.name))]
 
 # Create age dummy variables (replacing NAs with zeros)
 D3$age<-as.numeric(D$age_shooter1)
@@ -441,8 +220,7 @@ D$shooter.white<-pdum("w",D[[21]])
 D$shooter.minority<-pdum("b",D[[21]])+pdum("h",D[[21]])+pdum("ai",D[[21]])
 
 # Write out full dataset
-write.csv(D,"C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\wapo_df_all_variables.csv")
-
+write.csv(D,"wapo_df_all_variables.csv")
 
 ############################
 ### Modeling ###
@@ -477,7 +255,7 @@ D.main<-subset(D,select=c(
 summary(D.main)
 apply(D.main,2,sd)
 
-write.csv(D.main,"C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\shooting_modeling_data.csv")
+write.csv(D.main,"shooting_modeling_data.csv")
 
 # Linear model
 lm.out<-lm(casualties~.,D.main)
@@ -495,6 +273,7 @@ barplot(table(D$casualties)/nrow(D),axis.lty = 1,
 lines(p,col="Dark Blue")
 legend(x=7,y=.45,legend="Overlayed Poisson Distribution", #text.width=5,cex=.7,
   fill="Dark Blue",col="Dark Blue")
+png(file = "casualties_distribution.png")
 
 # Poisson model
 pois.out<-glm(casualties~.,data=D.main,family="poisson")
@@ -513,14 +292,13 @@ summary(nb.out)
 nb.write<-data.frame(nb.out$coef)
 nb.write$effects<-nb.out$effects[1:nrow(nb.write)]
 
-write.csv(nb.write,"C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting\\summary_best_model.csv")
+write.csv(nb.write,"summary_best_model.csv")
 
 library(corrplot)
 # View correlations
 D.main %>%
   cor() %>%
  corrplot()
-
 
 ### Graphics
 # What percent of shootings committed by males/females?
@@ -545,6 +323,8 @@ ggplot(D[D$lunch.known==1,], aes(x=lunch.proportion, y=casualties,
     axis.title = element_text(size=10, face = "bold")) +  
   scale_color_brewer(palette="Set1")
 
+jpg(file = "RO_model_fitted_line.jpeg")
+
 
 # Rifle vs. no rifle
 ggplot(D[D$wt.known==1,], aes(x=lunch.proportion, y=casualties, 
@@ -559,6 +339,8 @@ ggplot(D[D$wt.known==1,], aes(x=lunch.proportion, y=casualties,
     axis.title = element_text(size=10, face = "bold")) +
   scale_color_brewer(palette="Set1")
 
+jpg(file = "rifle_model_fitted_line.jpeg")
+
 # Illegal vs. Legal
 ggplot(D[D$ws.known==1,], aes(x=lunch.proportion, y=casualties, 
     col=as.factor(ws.illegal))) +
@@ -572,4 +354,4 @@ ggplot(D[D$ws.known==1,], aes(x=lunch.proportion, y=casualties,
     axis.title = element_text(size=10, face = "bold")) +
   scale_color_brewer(palette="Set1")
 
-# Study can't conclude based on illegal weapon. Either different data is needed, or different study
+jpg(file = "illegal_weapon_fitted_line.jpeg")
