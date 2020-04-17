@@ -27,7 +27,7 @@ The naming of the columns follow a logical convention. Most of the meanings of t
 - reas: reason. Example: reas.accidental = the shooting was accidental, reas.targeted = the shooter was going after a specific individual(s)
 - lunch: the percentage of students eligibile for a reduced-priced lunch program. Proxy variable for poverty. Example: lunch5075 = between 50% and 75% of the student population is eligible for this program
 
-The final dataset included 238 rows of data (each row represents a shooting), with 32 independent variables to predict 1 target (casualties). 
+The final dataset included 238 rows of data (each row represents a shooting), with 32 independent variables to predict 1 target (casualties). Timespan of the dataset covers 4/20/1999 through 4/3/2019. This should represnet every school shooting within that timeframe.  
 
 A linear model, poisson model, and negative binomial model were each specified with the cleaned model inputs. The negative binomial returned the best information criteria.  
 
