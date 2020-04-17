@@ -1,3 +1,6 @@
+# set wd
+setwd("C:\\Users\\uger7\\Desktop\\Data Incubator\\School Shooting")
+
 # Create function to find a keyword in a column
 # This function will output a column of 0/1 if
 # The column row you reference contains the keyword
@@ -331,6 +334,8 @@ ggplot(D.main,aes(y=PC2,x=PC1,col=as.factor(cluster.km.pc2)))+
                                   size=1, linetype="solid", 
                                   colour ="black"))
 
+jpg(file='cluster_outcomes.jpeg')
+
 
 # Show the poverty line
 ggplot(D.main,aes(y=PC2,x=PC1,col=lunch.proportion*100))+
@@ -383,6 +388,8 @@ ggplot(D.main,aes(y=PC2,x=PC1,col=as.factor(casualties)))+
     panel.background=element_rect(fill="grey60"),
     panel.grid=element_line(color="grey80"))
 
+jpg(file='cluster_casualties.jpeg')
+
 # Show resource officer in unimpoverished schools with no casualties
 D.main$resource_officer<-ifelse(D$resource_officer==1,T,F)
 ggplot(D.main,aes(y=PC2,x=PC1,col=resource_officer))+
@@ -404,7 +411,5 @@ ggplot(D.main,aes(y=PC2,x=PC1,col=resource_officer))+
                                   size=1, linetype="solid", 
                                   colour ="black"))+
   scale_color_brewer(palette="Set1")
-# Where the resource officer seems to be most
-# effective is in impoverished schools
 
-# controlling for poverty, having a resource officer on campus doesn't seem to help
+jpg(file='cluster_poverty.jpeg')
