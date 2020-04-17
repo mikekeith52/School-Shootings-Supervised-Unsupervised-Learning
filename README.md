@@ -2,7 +2,7 @@
 Utilizing R, [data](https://raw.githubusercontent.com/washingtonpost/data-school-shootings/master/school-shootings-data.csv) maintained by the [Washington Post](https://github.com/washingtonpost/data-school-shootings) was employed to model school shooting casualties with a negative binomial model (which models a Poisson distribution with overdipersion). K-means clustering was then used to classify school shootings into three distinct groups.
 
 ## Publication
-The findings were [published](https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/) in Spire in October 2018. I reran the solution in 2020 and the same findings hold.    
+The findings were [published](https://spiremagazine.com/2018/10/15/a-statistical-exploration-of-school-shootings/) in Spire in October 2018. I reran the solution in 2020 with an updated dataset and the same findings hold.    
 
 ## Caveats
 The dataset utilized does not contain enough observations to offer any reliable predictive power. This project attempted to be fully descriptive in nature. Although some of the findings can be disputed, through solid statistical techniques, there were interesting insights gleaned, especially about resource officers' presence and how that is suggestive of increasing casualties in a given school shooting, how poverty affects casualties, and which types of weapons are most prolific in these situations.  
